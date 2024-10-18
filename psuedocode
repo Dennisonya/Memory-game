@@ -1,0 +1,53 @@
+                   
+                                        Memory Card Game
+The memory card game is a simple and fun excercise on the odin project created to test your skills in local storage, useEfffects and other concepts of react.
+### Features
+The game takes form in a grid layout consisting of images of different characters and the aim of the game is for the user to pick a certain character not more than once, but as the user selects one character the whole grid of characters rearranges so as make the game a bit difficult, once the user selects a character he/she has chosen before hes score restes to zero. In this game the user can see his current score (that is how many characters he/she has selected without  resetting back to 0) and his highest score.
+### Technologies Used
+- React
+- JavaScript
+- CSS
+### planning Components 
+
+### Game Components: this is the main component that manages the game state, including the characters, scores and game logic.
+
+### Character Component: This represents each character in the Grid. it will display the character's image and handle click events.
+
+### ScoreBoard Component: This displays the current score and best score and best score, updating as the game progresses.
+
+#### Set Up State
+- `characters`: an array to hold the character data fetched from the API.
+- `selectedCharacters`: an array to hold the characters the user has selected.
+- `currentScore`: the number of characters the user has selected without resetting back to 0.
+- `bestScore `: A number to store the highest score achieved, which you can save in local storage.
+
+### Fetch Data
+- use the useEffect hook to fetch the data from an external API when the Game component mounts.
+-Set up loading and error States to enhance the user experience. For example a loading spinner while the data is being fetched and handle errors gracefully.
+
+### Render the Grid 
+- Use the map function to render the characters in the grid once the character data is fetched, render the character in a grid layout.
+- Each character can be represented by the charcter component, passing down necessary props like image source and click event.
+
+### Handle Click Events
+- Add click event handlers to each Character component When a character is clicked:
+check if it is already in the selected Characters array.
+- If it is, reset the current score to 0 and update the best score if necessary.
+- If it is not, add it to the selected characters array and update the current score.
+
+### Update Scores 
+- As the player taps on characters, update the currentScore and compare it with bestScore. If the current Score exceeds bestScore, update bestScore and save it in local Storage for persistence across sessions.
+
+### styling 
+- Use CSS to style your components and make the game visually engaging. consider adding animations to the grid shfit effect when characters are tapped.
+
+### Testing
+- Test the game functionality thoroughly. Check for edge cases, such as rapid tapping or refreshing the page, to nsure your game handles these situations correctly.
+
+### iterate
+- Iterate on the game to make it more engaging and challenging. Consider adding features like a
+ .Timer for added challenge.
+ .Levels of increasing difficulty.
+ .Sound effects for character clicks.
+
+ ### Deployment to Github
